@@ -1,6 +1,6 @@
 
 import { useState } from 'react';
-import { ExternalLink, Github } from 'lucide-react';
+import { ExternalLink, Github, Apple } from 'lucide-react';
 
 interface Project {
   id: number;
@@ -8,44 +8,49 @@ interface Project {
   description: string;
   image: string;
   category: string;
-  link: string;
+  link?: string;
   github?: string;
+  technologies: string[];
 }
 
 const Projects = () => {
   const projects: Project[] = [
     {
       id: 1,
-      title: "Modern E-commerce Platform",
-      description: "A fully responsive e-commerce website with product filtering, cart functionality, and secure checkout.",
-      image: "https://images.unsplash.com/photo-1661956602116-aa6865609028?q=80&w=1664&auto=format&fit=crop",
-      category: "Web Development",
+      title: "iOS Health Tracking App",
+      description: "Comprehensive health monitoring application using SwiftUI and HealthKit",
+      image: "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?q=80&w=1740&auto=format&fit=crop",
+      category: "SwiftUI",
+      technologies: ["SwiftUI", "HealthKit", "RxSwift"],
       link: "#",
       github: "#"
     },
     {
       id: 2,
-      title: "Brand Identity Design",
-      description: "Complete brand identity package including logo design, color palette, typography, and brand guidelines.",
-      image: "https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?q=80&w=1740&auto=format&fit=crop",
-      category: "Design",
+      title: "Reactive Finance Tracker",
+      description: "Real-time financial management app with reactive data binding",
+      image: "https://images.unsplash.com/photo-1579621970563-8266b03eff4c?q=80&w=1771&auto=format&fit=crop",
+      category: "RxSwift",
+      technologies: ["RxSwift", "Core Data", "SwiftUI"],
       link: "#"
     },
     {
       id: 3,
-      title: "Mobile Banking App",
-      description: "User-friendly mobile banking application with secure authentication, transaction history, and bill payments.",
-      image: "https://images.unsplash.com/photo-1617042375876-a13e36732a04?q=80&w=1740&auto=format&fit=crop",
-      category: "Mobile App",
+      title: "Social Media iOS App",
+      description: "Modern social networking application with complex reactive workflows",
+      image: "https://images.unsplash.com/photo-1607748851687-9ea5a0dcda11?q=80&w=1740&auto=format&fit=crop",
+      category: "iOS Development",
+      technologies: ["SwiftUI", "RxSwift", "Combine"],
       link: "#",
       github: "#"
     },
     {
       id: 4,
-      title: "Portfolio Website Template",
-      description: "Clean and modern portfolio website template for creatives, built with React and TailwindCSS.",
-      image: "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?q=80&w=1738&auto=format&fit=crop",
-      category: "Web Development",
+      title: "iOS Travel Companion",
+      description: "Feature-rich travel planning and tracking application",
+      image: "https://images.unsplash.com/photo-1516822670966-5eac1f916850?q=80&w=1740&auto=format&fit=crop",
+      category: "iOS Development",
+      technologies: ["SwiftUI", "MapKit", "Core Location"],
       link: "#",
       github: "#"
     },
@@ -63,10 +68,10 @@ const Projects = () => {
       <div className="max-w-7xl mx-auto">
         <div className="mb-16 text-center">
           <h2 className="text-3xl md:text-4xl font-display font-bold text-gray-900 mb-4">
-            My <span className="text-teal-600">Projects</span>
+            iOS <span className="text-teal-600">Projects</span>
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Here are some of my recent projects that showcase my skills and expertise.
+            A showcase of my iOS native application development expertise
           </p>
         </div>
         
@@ -109,16 +114,28 @@ const Projects = () => {
                 <p className="text-gray-600 mb-4">
                   {project.description}
                 </p>
+                <div className="mb-4 flex flex-wrap gap-2">
+                  {project.technologies.map((tech) => (
+                    <span 
+                      key={tech} 
+                      className="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded-full"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
                 <div className="flex gap-3">
-                  <a 
-                    href={project.link} 
-                    className="flex items-center gap-1 text-teal-600 hover:text-teal-800 transition-colors font-medium"
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                  >
-                    <ExternalLink size={16} />
-                    <span>View Project</span>
-                  </a>
+                  {project.link && (
+                    <a 
+                      href={project.link} 
+                      className="flex items-center gap-1 text-teal-600 hover:text-teal-800 transition-colors font-medium"
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                    >
+                      <ExternalLink size={16} />
+                      <span>View Project</span>
+                    </a>
+                  )}
                   {project.github && (
                     <a 
                       href={project.github} 
@@ -127,7 +144,7 @@ const Projects = () => {
                       rel="noopener noreferrer"
                     >
                       <Github size={16} />
-                      <span>Code</span>
+                      <span>Source Code</span>
                     </a>
                   )}
                 </div>
@@ -141,3 +158,4 @@ const Projects = () => {
 };
 
 export default Projects;
+

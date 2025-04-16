@@ -1,14 +1,14 @@
 
-import { Code, Lightbulb, Layout, Zap } from 'lucide-react';
+import { Code, Apple, SwissFranc, Zap } from 'lucide-react';
 
 const About = () => {
   const skills = [
-    { name: "HTML & CSS", level: 90 },
-    { name: "JavaScript", level: 85 },
-    { name: "React", level: 80 },
-    { name: "UI/UX Design", level: 75 },
-    { name: "Node.js", level: 70 },
-    { name: "TypeScript", level: 65 },
+    { name: "SwiftUI", level: 90 },
+    { name: "RxSwift", level: 85 },
+    { name: "iOS Development", level: 80 },
+    { name: "UIKit", level: 75 },
+    { name: "Core Data", level: 70 },
+    { name: "Swift", level: 95 },
   ];
 
   return (
@@ -19,30 +19,27 @@ const About = () => {
             About <span className="text-teal-600">Me</span>
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Get to know more about me, my background, and what I do.
+            Passionate iOS developer creating innovative mobile experiences
           </p>
         </div>
         
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-20">
           <div>
             <h3 className="text-2xl font-bold text-gray-900 mb-6">
-              My Story
+              My iOS Development Journey
             </h3>
             <div className="space-y-4 text-gray-600">
               <p>
-                Hello! I'm a passionate web developer and designer with over 5 years of experience
-                creating beautiful digital experiences. I combine my technical knowledge with creative
-                design thinking to build engaging and functional websites and applications.
+                As a dedicated iOS native application developer, I specialize in creating 
+                robust and performant mobile applications using SwiftUI and RxSwift.
               </p>
               <p>
-                I specialize in front-end development with a focus on creating responsive, accessible,
-                and performant web applications. I'm constantly learning and exploring new technologies
-                to stay at the forefront of web development.
+                My expertise lies in building clean, maintainable code with a strong focus 
+                on reactive programming principles and elegant user interfaces.
               </p>
               <p>
-                When I'm not coding, you can find me exploring design trends, attending tech meetups,
-                or hiking in the mountains. I believe in creating work that not only looks good but
-                also delivers real value to users.
+                I'm passionate about leveraging the latest iOS technologies to deliver 
+                exceptional user experiences that push the boundaries of mobile development.
               </p>
             </div>
           </div>
@@ -72,16 +69,16 @@ const About = () => {
         
         <div>
           <h3 className="text-2xl font-bold text-gray-900 mb-10 text-center">
-            What I Do
+            My Expertise
           </h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow text-center">
               <div className="w-16 h-16 bg-teal-100 text-teal-600 rounded-full flex items-center justify-center mx-auto mb-6">
-                <Layout size={28} />
+                <Apple size={28} />
               </div>
-              <h4 className="text-xl font-bold text-gray-900 mb-3">Web Design</h4>
+              <h4 className="text-xl font-bold text-gray-900 mb-3">SwiftUI Development</h4>
               <p className="text-gray-600">
-                Creating beautiful, intuitive designs focused on user experience and brand identity.
+                Creating modern, declarative user interfaces for iOS applications
               </p>
             </div>
             
@@ -89,19 +86,19 @@ const About = () => {
               <div className="w-16 h-16 bg-amber-100 text-amber-600 rounded-full flex items-center justify-center mx-auto mb-6">
                 <Code size={28} />
               </div>
-              <h4 className="text-xl font-bold text-gray-900 mb-3">Web Development</h4>
+              <h4 className="text-xl font-bold text-gray-900 mb-3">Reactive Programming</h4>
               <p className="text-gray-600">
-                Building responsive, performant websites and applications with modern technologies.
+                Implementing complex app logic using RxSwift and reactive patterns
               </p>
             </div>
             
             <div className="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow text-center">
               <div className="w-16 h-16 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">
-                <Lightbulb size={28} />
+                <SwissFranc size={28} />
               </div>
-              <h4 className="text-xl font-bold text-gray-900 mb-3">UI/UX Design</h4>
+              <h4 className="text-xl font-bold text-gray-900 mb-3">App Architecture</h4>
               <p className="text-gray-600">
-                Designing user interfaces and experiences that are both functional and delightful.
+                Designing clean, scalable, and maintainable iOS application architectures
               </p>
             </div>
             
@@ -111,7 +108,7 @@ const About = () => {
               </div>
               <h4 className="text-xl font-bold text-gray-900 mb-3">Performance Optimization</h4>
               <p className="text-gray-600">
-                Optimizing websites for speed, accessibility, and search engine visibility.
+                Ensuring smooth, efficient, and responsive iOS application performance
               </p>
             </div>
           </div>
@@ -122,3 +119,4 @@ const About = () => {
 };
 
 export default About;
+

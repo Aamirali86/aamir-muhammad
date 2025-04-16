@@ -1,5 +1,6 @@
 
 import { ArrowDown } from 'lucide-react';
+import { Apple, Code, Smartphone } from 'lucide-react';
 
 const Hero = () => {
   return (
@@ -7,29 +8,31 @@ const Hero = () => {
       <div className="max-w-5xl">
         <h1 className="text-4xl md:text-6xl font-display font-bold text-gray-900 mb-6">
           <span className="block">Hi, I'm</span>
-          <span className="text-teal-600">Your Name</span>
+          <span className="text-teal-600">Muhammad Aamir Ali</span>
         </h1>
         
         <h2 className="text-2xl md:text-4xl font-display font-medium text-gray-700 mb-6">
-          I create <span className="text-amber-500">stunning digital experiences</span>
+          iOS Native App Developer <span className="text-amber-500">using SwiftUI & RxSwift</span>
         </h2>
         
         <p className="text-lg md:text-xl text-gray-600 max-w-2xl mb-10">
-          I'm a passionate designer and developer focused on creating beautiful, 
-          functional, and user-centered digital experiences.
+          I specialize in crafting high-performance, elegant iOS applications 
+          with a focus on clean architecture and reactive programming.
         </p>
         
         <div className="flex flex-col sm:flex-row gap-4">
           <a 
             href="#projects" 
-            className="bg-teal-600 hover:bg-teal-700 text-white px-8 py-3 rounded-md transition-colors font-medium text-center"
+            className="bg-teal-600 hover:bg-teal-700 text-white px-8 py-3 rounded-md transition-colors font-medium text-center flex items-center justify-center gap-2"
           >
-            View My Work
+            <Code size={20} />
+            View My Projects
           </a>
           <a 
             href="#contact" 
-            className="bg-white hover:bg-gray-100 text-gray-900 border border-gray-300 px-8 py-3 rounded-md transition-colors font-medium text-center"
+            className="bg-white hover:bg-gray-100 text-gray-900 border border-gray-300 px-8 py-3 rounded-md transition-colors font-medium text-center flex items-center justify-center gap-2"
           >
+            <Smartphone size={20} />
             Contact Me
           </a>
         </div>
@@ -46,3 +49,4 @@ const Hero = () => {
 };
 
 export default Hero;
+
