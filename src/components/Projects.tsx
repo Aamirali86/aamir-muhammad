@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { ExternalLink, Github, Apple } from 'lucide-react';
 
@@ -17,42 +16,39 @@ const Projects = () => {
   const projects: Project[] = [
     {
       id: 1,
-      title: "iOS Health Tracking App",
-      description: "Comprehensive health monitoring application using SwiftUI and HealthKit",
-      image: "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?q=80&w=1740&auto=format&fit=crop",
-      category: "SwiftUI",
-      technologies: ["SwiftUI", "HealthKit", "RxSwift"],
-      link: "#",
-      github: "#"
+      title: "Careem (Uber Inc.)",
+      description: "The everything app for everyday needs. Rides, food, groceries, payments and more.",
+      image: "https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?q=80&w=1740&auto=format&fit=crop",
+      category: "iOS",
+      technologies: ["Swift", "UIKit", "RxSwift"],
+      link: "https://apps.apple.com/us/app/careem-rides-food-more/id592978487"
     },
     {
       id: 2,
-      title: "Reactive Finance Tracker",
-      description: "Real-time financial management app with reactive data binding",
-      image: "https://images.unsplash.com/photo-1579621970563-8266b03eff4c?q=80&w=1771&auto=format&fit=crop",
-      category: "RxSwift",
-      technologies: ["RxSwift", "Core Data", "SwiftUI"],
-      link: "#"
+      title: "Droobi Health",
+      description: "Leading chronic disease management platform tailored for the Arabic-speaking region.",
+      image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=1740&auto=format&fit=crop",
+      category: "iOS",
+      technologies: ["Swift", "HealthKit", "Core Data"],
+      link: "https://apps.apple.com/us/app/droobi-health/id1258209665"
     },
     {
       id: 3,
-      title: "Social Media iOS App",
-      description: "Modern social networking application with complex reactive workflows",
-      image: "https://images.unsplash.com/photo-1607748851687-9ea5a0dcda11?q=80&w=1740&auto=format&fit=crop",
-      category: "iOS Development",
-      technologies: ["SwiftUI", "RxSwift", "Combine"],
-      link: "#",
-      github: "#"
+      title: "Commonwealth",
+      description: "Investment platform allowing users to invest in athletes' careers starting at $50/share.",
+      image: "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?q=80&w=1740&auto=format&fit=crop",
+      category: "Flutter",
+      technologies: ["Flutter", "Dart", "Firebase"],
+      link: "https://apps.apple.com/us/app/cmnwlth/id1484029029"
     },
     {
       id: 4,
-      title: "iOS Travel Companion",
-      description: "Feature-rich travel planning and tracking application",
-      image: "https://images.unsplash.com/photo-1516822670966-5eac1f916850?q=80&w=1740&auto=format&fit=crop",
-      category: "iOS Development",
-      technologies: ["SwiftUI", "MapKit", "Core Location"],
-      link: "#",
-      github: "#"
+      title: "Casa Shares",
+      description: "Real estate investment app enabling portfolio building with as low as $100/share.",
+      image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=1740&auto=format&fit=crop",
+      category: "iOS",
+      technologies: ["SwiftUI", "Core Data", "Charts"],
+      link: "https://apps.apple.com/ie/app/casa-shares/id6667117553"
     },
   ];
 
@@ -158,4 +154,3 @@ const Projects = () => {
 };
 
 export default Projects;
-

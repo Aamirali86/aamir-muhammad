@@ -1,6 +1,6 @@
 
 import { ArrowDown } from 'lucide-react';
-import { Apple, Code, Smartphone } from 'lucide-react';
+import { Code, Smartphone, Apple } from 'lucide-react';
 
 const Hero = () => {
   return (
@@ -12,12 +12,13 @@ const Hero = () => {
         </h1>
         
         <h2 className="text-2xl md:text-4xl font-display font-medium text-gray-700 mb-6">
-          iOS Native App Developer <span className="text-amber-500">using SwiftUI & RxSwift</span>
+          iOS & Flutter Developer <span className="text-amber-500">with 12+ Years Experience</span>
         </h2>
         
         <p className="text-lg md:text-xl text-gray-600 max-w-2xl mb-10">
-          I specialize in crafting high-performance, elegant iOS applications 
-          with a focus on clean architecture and reactive programming.
+          Passionate mobile app developer specializing in iOS and Flutter development.
+          Creating scalable, user-friendly applications with clean architecture and
+          exceptional user experiences.
         </p>
         
         <div className="flex flex-col sm:flex-row gap-4">
@@ -49,4 +50,3 @@ const Hero = () => {
 };
 
 export default Hero;
-
