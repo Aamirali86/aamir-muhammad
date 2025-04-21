@@ -5,38 +5,38 @@ const WorkExperience = () => {
   const experiences = [
     {
       id: 1,
-      company: "Uber Inc. (Careem)",
-      role: "Senior iOS Developer",
-      period: "2020 - Present",
-      description: "Lead iOS developer for Careem (acquired by Uber), working on the super app that provides rides, food delivery, and payment services.",
+      company: "Scalio",
+      role: "Staff Software Engineer",
+      period: "2021 - Present",
+      description: "Core iOS application development with high standards from design to app store deployment.",
       highlights: [
-        "Led the development of key features using Swift and UIKit",
-        "Implemented MVVM architecture and RxSwift for reactive programming",
-        "Collaborated with cross-functional teams across multiple regions"
+        "Lead iOS application development with emphasis on quality and best practices",
+        "Collaborated with DevOps team to establish CICD pipeline using Github Action and CircleCI",
+        "Implementing high-standard iOS applications using modern Swift practices"
       ]
     },
     {
       id: 2,
-      company: "Droobi Health",
-      role: "iOS Team Lead",
-      period: "2018 - 2020",
-      description: "Led the iOS development team for the leading Arabic-region chronic disease management platform.",
+      company: "Venturedive/Careem",
+      role: "Senior Software Engineer",
+      period: "2015 - 2021",
+      description: "Senior developer role focusing on iOS development and team mentorship.",
       highlights: [
-        "Architected and developed the iOS application using Swift",
-        "Integrated HealthKit and Core Data for health metrics tracking",
-        "Managed team of developers and established best practices"
+        "Mentored team members and monitored their progress towards objectives",
+        "Implemented reactive programming using RxSwift and RxCocoa",
+        "Developed generic and reusable repositories for multiple projects"
       ]
     },
     {
       id: 3,
-      company: "Commonwealth",
-      role: "Senior Flutter Developer",
-      period: "2017 - 2018",
-      description: "Developed investment platform enabling users to invest in athletes' careers.",
+      company: "Digital Dividend / Tradekey",
+      role: "Software Engineer",
+      period: "2012 - 2015",
+      description: "Full-stack mobile development across iOS and Android platforms.",
       highlights: [
-        "Built cross-platform application using Flutter and Dart",
-        "Implemented real-time investment tracking features",
-        "Integrated payment gateways and security measures"
+        "Developed instant messaging modules for mobile applications",
+        "Built applications using Objective-C and Java for iOS and Android",
+        "Implemented best practices in mobile development across platforms"
       ]
     }
   ];
