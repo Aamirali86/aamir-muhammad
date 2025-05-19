@@ -70,10 +70,6 @@ const Footer = () => {
         </div>
         
         <div className="pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-gray-500 mb-4 md:mb-0">
-            Designed and built with ❤️
-          </p>
-          
           <div className="flex space-x-6">
             <a 
               href="https://linkedin.com/in/muhammadaamirali/" 
