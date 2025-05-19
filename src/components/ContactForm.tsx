@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { useToast } from "@/hooks/use-toast";
 
@@ -29,8 +28,8 @@ const ContactForm = () => {
     setIsSubmitting(true);
     
     try {
-      // Replace this URL with your actual Google Sheet Web App URL after deployment
-      const sheetUrl = "YOUR_GOOGLE_SCRIPT_WEB_APP_URL";
+      // Updated Google Sheet Web App URL
+      const sheetUrl = "https://script.google.com/macros/s/AKfycbyJmVY35yC3CSFqzBCp4qXxvnMelHDIzRCUV2ZKxyMqlWN_KBu6YtXC_tgCxWi6y8rs/exec";
       
       const response = await fetch(sheetUrl, {
         method: 'POST',
