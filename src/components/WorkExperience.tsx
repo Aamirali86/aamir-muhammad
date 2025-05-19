@@ -6,13 +6,15 @@ const WorkExperience = () => {
     {
       id: 1,
       company: "Scalio",
-      role: "Staff Software Engineer",
+      role: "Senior Software Engineer",
       period: "2021 - Present",
       description: "Core iOS application development with high standards from design to app store deployment.",
       highlights: [
-        "Lead iOS application development with emphasis on quality and best practices",
-        "Collaborated with DevOps team to establish CICD pipeline using Github Action and CircleCI",
-        "Implementing high-standard iOS applications using modern Swift practices"
+        "Led the development of high-performance investment applications focused on live sports markets including horse racing, tennis, and golf, ensuring seamless real-time experiences for users.",
+        "Built scalable and maintainable apps using MVVM-C and Clean Architecture, enabling modular codebases and facilitating easy feature expansion and testing.",
+        "Utilized SwiftUI and UIKit in production-level apps, taking full advantage of declarative UI and Apple’s latest frameworks to deliver intuitive, modern user interfaces.",
+        "Set up and maintained robust CI/CD pipelines using GitHub Actions and CircleCI, automating build, test, and deployment processes to ensure smooth release cycles.",
+        "Leveraged RxSwift and Combine (where applicable) to architect complex reactive flows for live data streams, user interactions, and background syncing, making the apps more responsive and resilient."
       ]
     },
     {
@@ -22,9 +24,11 @@ const WorkExperience = () => {
       period: "2015 - 2021",
       description: "Senior developer role focusing on iOS development and team mentorship.",
       highlights: [
-        "Mentored team members and monitored their progress towards objectives",
-        "Implemented reactive programming using RxSwift and RxCocoa",
-        "Developed generic and reusable repositories for multiple projects"
+        "Conducted regular code reviews, advocated for best practices in testing, and mentored junior engineers in architectural decisions and reactive programming paradigms",
+        "Contributed to the development of major consumer apps including Careem, VistaJet, Bookr, and Munchies, each with unique business domains and complex technical challenges.",
+        "Architected and implemented modular, reusable frameworks adopted across multiple clients and internal projects, accelerating development speed and maintaining consistency.",
+        "Collaborated on React Native and Flutterprojects when needed, bridging native modules and contributing to hybrid app strategies.",
+        "Championed clean code practices and peer code reviews, uplifting the team’s overall development standards and delivery confidence"
       ]
     },
     {
@@ -34,9 +38,9 @@ const WorkExperience = () => {
       period: "2012 - 2015",
       description: "Full-stack mobile development across iOS and Android platforms.",
       highlights: [
-        "Developed instant messaging modules for mobile applications",
-        "Built applications using Objective-C and Java for iOS and Android",
-        "Implemented best practices in mobile development across platforms"
+        "Engineered real-time messaging modules with seamless synchronization, delivery receipts, and push notifications, enhancing in-app communication across platforms.",
+        "Developed native mobile applications using Objective-C (iOS) and Java (Android), with a focus on performance, maintainability, and platform-specific best practices.",
+        "Applied industry-standard mobile development practices, including clean architecture, modular code, and automated testing to ensure consistency, scalability, and ease of future enhancements"
       ]
     }
   ];

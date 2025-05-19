@@ -20,7 +20,7 @@ const Projects = () => {
       description: "The everything app for everyday needs. Rides, food, groceries, payments and more.",
       image: "https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?q=80&w=1740&auto=format&fit=crop",
       category: "iOS",
-      technologies: ["Swift", "UIKit", "RxSwift"],
+      technologies: ["Swift", "UIKit", "RxSwift", "Google Maps", "Bitrise"],
       link: "https://apps.apple.com/us/app/careem-rides-food-more/id592978487"
     },
     {
@@ -29,7 +29,7 @@ const Projects = () => {
       description: "Leading chronic disease management platform tailored for the Arabic-speaking region.",
       image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=1740&auto=format&fit=crop",
       category: "iOS",
-      technologies: ["Swift", "HealthKit", "Core Data"],
+      technologies: ["Swift", "UIKit", , "Firebase", "Jenkins"],
       link: "https://apps.apple.com/us/app/droobi-health/id1258209665"
     },
     {
@@ -38,7 +38,7 @@ const Projects = () => {
       description: "Investment platform allowing users to invest in athletes' careers starting at $50/share.",
       image: "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?q=80&w=1740&auto=format&fit=crop",
       category: "Flutter",
-      technologies: ["Flutter", "Dart", "Firebase"],
+      technologies: ["Flutter", "Dart", "Firebase", "Github Actions", "Core Data"],
       link: "https://apps.apple.com/us/app/cmnwlth/id1484029029"
     },
     {
@@ -47,9 +47,18 @@ const Projects = () => {
       description: "Real estate investment app enabling portfolio building with as low as $100/share.",
       image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=1740&auto=format&fit=crop",
       category: "iOS",
-      technologies: ["SwiftUI", "Core Data", "Charts"],
+      technologies: ["SwiftUI", "Combine", "Core Data", "Charts", "Github Actions"],
       link: "https://apps.apple.com/ie/app/casa-shares/id6667117553"
     },
+    {
+      id: 5,
+      title: "Bookr",
+      description: "A new way of booking, Bookr makes scheduling appointments rewarding. Through Bookr, you can discover new beauty spots, read real reviews and book appointments instantly with just a touch of a button. No dialing required!",
+      image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=1740&auto=format&fit=crop",
+      category: "React Native",
+      technologies: ["React Native", "Expo", "Charts", "GraphQL"],
+      link: "https://apps.apple.com/us/app/bookr-for-salons-and-spas/id984497050"
+    }
   ];
 
   const categories = ["All", ...new Set(projects.map(project => project.category))];
@@ -67,7 +76,7 @@ const Projects = () => {
             iOS <span className="text-teal-600">Projects</span>
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            A showcase of my iOS native application development expertise
+            A showcase of my iOS native/hybrid application development expertise
           </p>
         </div>
         

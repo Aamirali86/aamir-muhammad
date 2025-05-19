@@ -12,15 +12,17 @@ const Hero = () => {
         </h1>
         
         <h2 className="text-2xl md:text-4xl font-display font-medium text-gray-700 mb-6">
-          iOS & Flutter Developer <span className="text-amber-500">with 12+ Years Experience</span>
+          iOS Flutter & React Native Developer <span className="text-amber-500">with 12+ Years Experience</span>
         </h2>
         
         <p className="text-lg md:text-xl text-gray-600 max-w-2xl mb-10">
-          Passionate mobile app developer specializing in iOS and Flutter development.
-          Creating scalable, user-friendly applications with clean architecture and
-          exceptional user experiences.
+          I'm a passionate mobile app developer specializing in iOS, Flutter, and React Native, with a strong focus on creating scalable, user-friendly applications using clean architecture and delivering exceptional user experiences.
         </p>
-        
+
+        <p className="text-lg md:text-xl text-gray-600 max-w-2xl mb-10">
+          My iOS expertise lies in UIKit, SwiftUI, and RxSwift, enabling me to build responsive, high-performance apps with well-structured and maintainable codebases. I have hands-on experience setting up complex app architectures, managing intuitive user interfaces, and automating CI/CD pipelines to ensure seamless and efficient app delivery.
+        </p>
+
         <div className="flex flex-col sm:flex-row gap-4">
           <a 
             href="#projects" 

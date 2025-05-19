@@ -4,11 +4,13 @@ import { Code, Apple, SwissFranc, Zap } from 'lucide-react';
 const About = () => {
   const skills = [
     { name: "iOS Development", level: 95 },
-    { name: "Flutter", level: 90 },
-    { name: "SwiftUI", level: 90 },
+    { name: "Flutter/Dart", level: 90 },
+    { name: "SwiftUI/Combine", level: 90 },
     { name: "UIKit", level: 95 },
     { name: "RxSwift", level: 90 },
     { name: "Kotlin", level: 85 },
+    { name: "React Native", level: 80 },
+    { name: "GraphQL", level: 80 },
   ];
 
   return (
@@ -75,7 +77,7 @@ const About = () => {
           <h3 className="text-2xl font-bold text-gray-900 mb-10 text-center">
             My Expertise
           </h3>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8">
             <div className="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow text-center">
               <div className="w-16 h-16 bg-teal-100 text-teal-600 rounded-full flex items-center justify-center mx-auto mb-6">
                 <Apple size={28} />
@@ -96,6 +98,16 @@ const About = () => {
               </p>
             </div>
             
+            <div className="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow text-center">
+              <div className="w-16 h-16 bg-teal-100 text-teal-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                <Apple size={28} />
+              </div>
+              <h4 className="text-xl font-bold text-gray-900 mb-3">React Native Development</h4>
+              <p className="text-gray-600">
+                Expert in JavaScript, React and Expo for building scalable applications
+              </p>
+            </div>
+
             <div className="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow text-center">
               <div className="w-16 h-16 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">
                 <SwissFranc size={28} />
