@@ -1,6 +1,7 @@
 
 import { useState } from 'react';
 import { Mail, MapPin, Phone } from 'lucide-react';
+import { useToast } from "@/hooks/use-toast";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -9,23 +10,58 @@ const Contact = () => {
     subject: '',
     message: ''
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const { toast } = useToast();
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // In a real application, you would handle form submission here
-    console.log('Form submitted:', formData);
-    alert('Thank you for your message! I will get back to you soon.');
-    setFormData({
-      name: '',
-      email: '',
-      subject: '',
-      message: ''
-    });
+    setIsSubmitting(true);
+    
+    try {
+      // Replace this URL with your actual Google Sheet Web App URL after deployment
+      const sheetUrl = "YOUR_GOOGLE_SCRIPT_WEB_APP_URL";
+      
+      const response = await fetch(sheetUrl, {
+        method: 'POST',
+        mode: 'no-cors', // This is important for handling CORS issues with Google Scripts
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          ...formData,
+          timestamp: new Date().toISOString()
+        })
+      });
+      
+      // Since we're using no-cors, we can't really check the response
+      // Instead, we're assuming success and showing a confirmation
+      toast({
+        title: "Message sent!",
+        description: "Thank you for your message. I'll get back to you soon.",
+      });
+      
+      // Reset form
+      setFormData({
+        name: '',
+        email: '',
+        subject: '',
+        message: ''
+      });
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      toast({
+        title: "Error",
+        description: "There was a problem sending your message. Please try again.",
+        variant: "destructive"
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -146,6 +182,7 @@ const Contact = () => {
                     className="w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent"
                     placeholder="John Doe"
                     required
+                    disabled={isSubmitting}
                   />
                 </div>
                 <div>
@@ -161,6 +198,7 @@ const Contact = () => {
                     className="w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent"
                     placeholder="john@example.com"
                     required
+                    disabled={isSubmitting}
                   />
                 </div>
               </div>
@@ -178,6 +216,7 @@ const Contact = () => {
                   className="w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent"
                   placeholder="Project Inquiry"
                   required
+                  disabled={isSubmitting}
                 />
               </div>
               
@@ -194,14 +233,16 @@ const Contact = () => {
                   className="w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent"
                   placeholder="Your message here..."
                   required
+                  disabled={isSubmitting}
                 ></textarea>
               </div>
               
               <button
                 type="submit"
-                className="bg-teal-600 hover:bg-teal-700 text-white px-6 py-3 rounded-md transition-colors font-medium"
+                className="bg-teal-600 hover:bg-teal-700 text-white px-6 py-3 rounded-md transition-colors font-medium flex items-center gap-2"
+                disabled={isSubmitting}
               >
-                Send Message
+                {isSubmitting ? 'Sending...' : 'Send Message'}
               </button>
             </form>
           </div>
